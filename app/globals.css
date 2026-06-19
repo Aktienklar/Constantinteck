@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1c1c1c;
+  --foreground: #f5f3ef;
+  --muted: #a3a09a;
+  --border: #2a2a2a;
+
+  /* fruit-toned accents */
+  --berry: #c0316d;
+  --berry-light: #e0568f;
+  --orange: #ff7a3d;
+  --lime: #b6e24a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-berry: var(--berry);
+  --color-berry-light: var(--berry-light);
+  --color-orange: var(--orange);
+  --color-lime: var(--lime);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: var(--berry);
+  color: #fff;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
